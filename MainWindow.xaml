@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SurveillanceIndexer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="AI Surveillance" Height="450" Width="800">
+    <Grid Background="Black">
+        <Image x:Name="VideoPlayer" Stretch="Uniform" />
     </Grid>
 </Window>
