@@ -1,12 +1,23 @@
 ﻿<Window x:Class="SurveillanceIndexer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SurveillanceIndexer"
-        mc:Ignorable="d"
-        Title="AI Surveillance" Height="450" Width="800">
-    <Grid Background="Black">
-        <Image x:Name="VideoPlayer" Stretch="Uniform" />
+        Title="Surveillance Indexer" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/> <ColumnDefinition Width="300"/> </Grid.ColumnDefinitions>
+
+        <Image Name="VideoPlayer" Grid.Column="0" Stretch="Uniform" Margin="10"/>
+
+        <StackPanel Grid.Column="1" Background="#f0f0f0" Margin="5">
+            <Label Content="Processing Queue" FontWeight="Bold" Margin="5"/>
+            
+            <Button Content="Add Videos..." Height="30" Margin="5" Click="AddVideos_Click"/>
+            
+            <ListBox Name="QueueListBox" Height="400" Margin="5"/>
+            
+            <Button Content="Start Processing" Name="BtnStart" Height="40" Margin="5" Click="StartProcessing_Click"/>
+            
+            <TextBlock Name="StatusText" Text="Ready" Margin="10" Foreground="Gray"/>
+        </StackPanel>
     </Grid>
 </Window>

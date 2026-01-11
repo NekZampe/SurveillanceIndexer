@@ -15,10 +15,15 @@ namespace SurveillanceIndexer.Models
         public int Id { get; set; }
 
         public int VideoFileId { get; set; }
+
         [ForeignKey("VideoFileId")]
         public virtual VideoFile VideoSource { get; set; }
 
-        public string Label { get; set; }
+        [Required]
+        public int LabelId { get; set; }
+
+        [ForeignKey("LabelId")]
+        public virtual ObjectLabel ObjectLabel { get; set; }
 
         public long StartTicks { get; set; }
         public long EndTicks { get; set; }
@@ -30,5 +35,6 @@ namespace SurveillanceIndexer.Models
         public float MaxConfidence { get; set; }
 
         public double TotalSeconds => Duration.TotalSeconds;
+
     }
 }

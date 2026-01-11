@@ -27,7 +27,6 @@ namespace SurveillanceIndexer.Models
         public double FrameRate { get; set; }
         public DateTime IngestedDate { get; set; }
 
-        // Relationship: One video has many detections
-        public ICollection<DetectionEvent> Detections { get; set; }
+        public virtual ICollection<TrackedEvent> TrackedEvents { get; set; } = new List<TrackedEvent>();
     }
 }
