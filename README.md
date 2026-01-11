@@ -4,7 +4,7 @@ Surveillance Indexer is a video management system designed to ingest surveillanc
 
 ![Application Screenshot](https://github.com/user-attachments/assets/5496e29f-3ce9-4561-9d74-c982e510b49d)
 
-It's still under development will update with progress.
+It's still under development, I will update it with progress.
 
 ## Features
 * **Drag-and-Drop Ingestion:** Batch processing queue with duplicate detection via MD5 hashing.
