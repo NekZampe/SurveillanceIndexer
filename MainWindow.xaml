@@ -8,6 +8,5 @@
 
         <Image Name="VideoPlayer" Grid.Column="0" Stretch="Uniform" Margin="10"/>
 
-        <components:VideoQueueView Grid.Column="1" />
     </Grid>
 </Window>
