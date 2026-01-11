@@ -19,5 +19,6 @@
             
             <TextBlock Name="StatusText" Text="Ready" Margin="10" Foreground="Gray"/>
         </StackPanel>
+        
     </Grid>
 </Window>
