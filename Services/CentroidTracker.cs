@@ -87,7 +87,7 @@ namespace SurveillanceIndexer.Services
                     }
 
                     // If we found a match within reasonable distance
-                    if (bestInputIdx != -1 && minDist < 100) // 100 pixels threshold
+                    if (bestInputIdx != -1 && minDist < 200) // 200 pixels threshold
                     {
                         Objects[objectId] = inputCentroids[bestInputIdx]; // Update position
                         Disappeared[objectId] = 0; // Reset counter

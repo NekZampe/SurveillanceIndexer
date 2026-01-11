@@ -27,6 +27,9 @@ namespace SurveillanceIndexer.Models
         public double FrameRate { get; set; }
         public DateTime IngestedDate { get; set; }
 
+        [Required]
+        public string HashMD5 { get; set; }
+
         public virtual ICollection<TrackedEvent> TrackedEvents { get; set; } = new List<TrackedEvent>();
     }
 }

@@ -144,9 +144,11 @@ namespace SurveillanceIndexer.Services
             string fileName = Path.GetFileName(videoPath);
             string fullPath = Path.GetFullPath(videoPath);
 
+            var hashMD5 = Helpers.ComputeMD5(videoPath);
+
             // Check if this video file already exists in the database
             var existingVideo = await db.VideoFiles
-                .FirstOrDefaultAsync(v => v.FullPath == fullPath);
+                .FirstOrDefaultAsync(v => v.HashMD5 == hashMD5);
 
             if (existingVideo != null)
             {
@@ -164,7 +166,8 @@ namespace SurveillanceIndexer.Services
                 Width = width,
                 Height = height,
                 FrameRate = frameRate,
-                IngestedDate = DateTime.Now
+                IngestedDate = DateTime.Now,
+                HashMD5 = hashMD5
             };
 
             db.VideoFiles.Add(videoFile);
